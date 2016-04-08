@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import Base from 'ember-simple-auth/authenticators/base';
-import ENV from 'ember-cli-adal/config/environment';
+import ENV from 'ember-cli-adal2/config/environment';
 
 export default Base.extend({
     restore(data) {

@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import ENV from 'ember-cli-adal/config/environment';
+import ENV from 'ember-cli-adal2/config/environment';
 
 export
 default Ember.Route.extend({
