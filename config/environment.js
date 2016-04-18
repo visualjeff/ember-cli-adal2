@@ -8,7 +8,7 @@ module.exports = function(environment) {
         locationType: 'auto',
 
         aadConfig: {
-            tenant: 'common',
+            tenant: 'UserSandbox.onmicrosoft.com',
             clientId: '1D8D7FDB-E91A-4AD1-8FAE-ED6E15B06798',
             postLogoutRedirectUri: 'http://localhost:4200/',
             cacheLocation: 'localStorage', // enable this for IE, as sessionStorage does not work for localhost.
