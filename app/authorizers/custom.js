@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import Base from 'ember-simple-auth/authorizers/base';
-import ENV from 'ember-cli-adal/config/environment';
+//import ENV from 'ember-cli-adal/config/environment';
 
 export default Base.extend({
     currentPath: Ember.computed.alias('controllers.application.currentPath'),

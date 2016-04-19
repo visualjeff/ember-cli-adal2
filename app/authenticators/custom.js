@@ -31,7 +31,7 @@ export default Base.extend(Ember.Evented, {
         //Ember.RSVP.on('fulfilled', this.listener);
         //Ember.RSVP.on('rejected', this.listener);
 
-        return new Ember.RSVP.Promise(function(resolve, reject) {
+        return new Ember.RSVP.Promise(function(resolve /*, reject */ ) {
                 let authContext = ENV.APP.authContext;
                 Ember.debug(`Cached user? ${JSON.stringify(authContext.getCachedUser())}`);
                 if (!authContext.getCachedUser()) {
@@ -48,7 +48,7 @@ export default Base.extend(Ember.Evented, {
     },
     invalidate() {
         Ember.debug(`custom authenticator invalidate called`);
-        return new Ember.RSVP.Promise(function(resolve, reject) {
+        return new Ember.RSVP.Promise(function(resolve /*, reject */ ) {
             Ember.debug('Entered promise');
             let authContext = ENV.APP.authContext;
             authContext.logOut();

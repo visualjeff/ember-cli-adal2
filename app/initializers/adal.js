@@ -1,13 +1,14 @@
 import Ember from 'ember';
-import injectScript from 'ember-inject-script';
+//import injectScript from 'ember-inject-script';
 import ENV from 'ember-cli-adal2/config/environment';
+
 /* global AuthenticationContext */
 export
 default {
     name: 'adal',
     //before: 'authentication',
     initialize() {
-        Ember.debug("Injecting adal.js into Ember app");
+        //Ember.debug("Injecting adal.js into Ember app");
         //var url = "//adal/adal.min.js";
         //var url = "https://secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js";
 
@@ -35,8 +36,8 @@ default {
         GitHub started using X-Content-Type-Options: nosniff, which instructs more modern browsers to enforce strict MIME type checking.
         It then returns the raw files in a MIME type returned by the server - preventing the browser from using the file as-intended (if the browser honors the setting).
         */
-        var url = "https://rawgit.com/AzureAD/azure-activedirectory-library-for-js/master/lib/adal.js";
-        injectScript(url);
+        //var url = "https://rawgit.com/AzureAD/azure-activedirectory-library-for-js/master/lib/adal.js";
+        //injectScript(url);
 
         Ember.debug("Initializing adal.js");
         Ember.assert('Must be a valid object', ENV.aadConfig);
@@ -69,8 +70,5 @@ default {
                 ev.preventDefault();
             });
         }
-
-
-
     }
 };
